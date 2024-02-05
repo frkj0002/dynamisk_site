@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+
+    <title>Produktliste</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="billeder/logo.svg" alt="logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="kategori.html">Kategorier</a></li>
+                <li><a href="produktliste.html">Produktliste</a></li>
+                <li><a href="produkt.html">Produkt</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Produkter</h1>
+            <div class="grid_1_1_1"></div>
+        </section>
+        <template id="produkter_template">
+            <article class="produkter">
+                <div id="udsalg_procent">
+                    <p class="procent">31%</p>
+                </div>
+                <div id="udsolgt_tekst">
+                    <p>Udsolgt</p>
+                </div>
+                <div>
+                    <a href="produkt.html">
+                        <img src="https://kea-alt-del.dk/t7/images/webp/640/1542.webp" alt="sko"
+                            class="udsolgt product_image">
+                        <h2 class="udsolgt">Ballistic Rubber Shoe</h2>
+                    </a>
+                    <p class="udsolgt"><span class="underkategori">Sko</span> | <span class="maerke">Puma</span></p>
+                    <div class="flex_pris">
+                        <p class="udsalg_pris_efter udsolgt">DKK 2414,-</p>
+                        <p class="udsalg_pris_før udsolgt">DKK 3499,-</p>
+                        <button class="udsolgt">Køb</button>
+                    </div>
+                </div>
+            </article>
+        </template>
+        <!-- <div class="grid_1_1_1"> -->
+        <!-- <div class="produkter">
+                <a href="produkt.html">
+                    <img src="https://kea-alt-del.dk/t7/images/webp/640/1163.webp" alt="troeje">
+                    <h2>Sahara Team India Fanwear Round Neck Jersey</h2>
+                </a>
+                <p class="udsolgt">T-shirts | Nike</p>
+                <p>DKK 895,-</p>
+                <button>Køb</button>
+            </div> -->
+
+        <!-- <div class="produkter">
+                <div class="udsolgt_tekst">
+                    <p>Udsolgt</p>
+                </div>
+                <div>
+                    <a href="produkt.html">
+                        <img src="https://kea-alt-del.dk/t7/images/webp/640/1526.webp" alt="rygsæk" class="udsolgt">
+                        <h2 class="udsolgt">Big Cat Backpack Black</h2>
+                    </a>
+                    <p class="udsolgt">Rygsæk | Puma</p>
+                    <p class="udsolgt">DKK 1299,-</p>
+                    <button class="udsolgt">Køb</button>
+                </div>
+            </div> -->
+        <!-- <div class="produkter">
+                <div class="udsalg_procent">
+                    <p>49%</p>
+                </div>
+                <div>
+                    <a href="produkt.html">
+                        <img src="https://kea-alt-del.dk/t7/images/webp/640/1528.webp" alt="fleece">
+                        <h2>Black Fleece Jacket</h2>
+                    </a>
+                    <p class="udsolgt">Jakker | Puma</p>
+                    <div class="flex_pris">
+                        <p class="udsalg_pris_efter">DKK 2040,-</p>
+                        <p class="udsalg_pris_før">DKK 3999,-</p>
+                        <button>Køb</button>
+                    </div>
+                </div>
+            </div> -->
+        <!-- <div class="produkter">
+                <a href="produkt.html">
+                    <img src="https://kea-alt-del.dk/t7/images/webp/640/1534.webp" alt="tee">
+                    <h2>Black Leaping Cat T-shirt</h2>
+                </a>
+                <p class="udsolgt">T-shirts | Puma</p>
+                <p>DKK 899,-</p>
+                <button>Køb</button>
+            </div> -->
+        <!-- <div class="produkter">
+                <a href="produkt.html">
+                    <img src="https://kea-alt-del.dk/t7/images/webp/640/1531.webp" alt="tee">
+                    <h2>Grey Solid Round Neck T-Shirt</h2>
+                </a>
+                <p class="udsolgt">T-shirts | Puma</p>
+                <p>DKK 799,-</p>
+                <button>Køb</button>
+            </div> -->
+        <!-- <div class="produkter">
+                <div class="udsalg_procent">
+                    <p>31%</p>
+                </div>
+                <div class="udsolgt_tekst">
+                    <p>Udsolgt</p>
+                </div>
+                <div>
+                    <a href="produkt.html">
+                        <img src="https://kea-alt-del.dk/t7/images/webp/640/1542.webp" alt="sko" class="udsolgt">
+                        <h2 class="udsolgt">Ballistic Rubber Shoe</h2>
+                    </a>
+                    <p class="udsolgt">Sko | Puma</p>
+                    <div class="flex_pris">
+                        <p class="udsalg_pris_efter udsolgt">DKK 2414,-</p>
+                        <p class="udsalg_pris_før udsolgt">DKK 3499,-</p>
+                        <button class="udsolgt">Køb</button>
+                    </div>
+
+                </div>
+            </div> -->
+        <!-- </div> -->
+    </main>
+    <script src="produktliste.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,176 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0 auto;
+}
+img {
+  width: 100%;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 10%);
+}
+.logo img {
+  width: 28%;
+  height: auto;
+}
+nav {
+  display: flex;
+  align-items: center;
+}
+nav li {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+ul {
+  display: flex;
+  list-style: none;
+}
+ul a {
+  display: block;
+  text-decoration: none;
+  text-align: end;
+  padding: 10px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: #d98b30;
+}
+ul a:hover {
+  color: #422a0f;
+}
+
+h1 {
+  color: #422a0f;
+  font-family: "Krona One", sans-serif;
+  margin-left: 66px;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+h2 {
+  color: #422a0f;
+}
+p {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.flex {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 50px;
+  margin-top: 60px;
+}
+.luft_forside {
+  margin-top: 80px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.grid_1_1_1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 0 70px 0 70px;
+  /* display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem; */
+}
+.kategorier {
+  text-decoration: none;
+  padding: 2em;
+  color: whitesmoke;
+  background-color: #422a0f;
+  border-radius: 5px;
+  font-family: "Krona One", sans-serif;
+  font-size: 1.3rem;
+}
+
+.produkter {
+  width: 84%;
+  position: relative;
+  background-color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  border: 1px solid #422a0f;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+.produkter a {
+  text-decoration: none;
+}
+/* .flex_pris {
+  display: flex;
+  gap: 25%;
+} */
+.udsalg_pris_før {
+  text-decoration: line-through;
+  opacity: 50%;
+  margin-top: 0;
+}
+.udsalg_pris_efter {
+  color: rgb(205, 52, 52);
+  margin-bottom: 3px;
+}
+#udsalg_procent {
+  position: absolute;
+  background-color: rgb(205, 52, 52);
+  padding: 0 15px 0 15px;
+  color: whitesmoke;
+  z-index: 1;
+  left: 0;
+}
+.udsolgt {
+  opacity: 50%;
+}
+#udsolgt_tekst {
+  position: absolute;
+  padding: 0 15px 0 15px;
+  z-index: 1;
+  background-color: #5e5e5e;
+  color: whitesmoke;
+  right: 0;
+}
+
+.grid_1_1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 60px;
+}
+.koeb_boks {
+  /* background: #d8d8d8; */
+  color: #422a0f;
+  padding: 1rem;
+  width: 45%;
+  padding-bottom: 0px;
+  /* align-self: center; */
+  justify-self: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+form {
+  margin-top: 55px;
+}
+.koeb_boks h3 {
+  font-size: 2rem;
+}
+.koeb_boks button {
+  display: block;
+  margin-top: 2rem;
+  width: 100%;
+  padding: 0.5rem 1.25rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 2px solid;
+  font-weight: bold;
+}
+.produkt_billede {
+  width: 78%;
+  justify-self: end;
+}
+
+.skjul {
+  display: none;
+}

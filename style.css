@@ -54,6 +54,9 @@ h1 {
 h2 {
   color: #422a0f;
 }
+h4 {
+  font-size: 1.3rem;
+}
 p {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
@@ -94,26 +97,39 @@ p {
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 10px;
-  border: 1px solid #422a0f;
+  /* border: 1px solid #422a0f; */
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 10%);
 }
 .produkter a {
   text-decoration: none;
+}
+.tilbage {
+  color: #422a0f;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+.tilbage p {
+  margin-left: 90px;
 }
 /* .flex_pris {
   display: flex;
   gap: 25%;
 } */
-.udsalg_pris_før {
-  text-decoration: line-through;
-  opacity: 50%;
+.pris {
+  /* text-decoration: line-through; */
+  /* opacity: 50%; */
   margin-top: 0;
+  color: black;
+}
+.pris_før {
+  text-decoration: line-through;
 }
 .udsalg_pris_efter {
   color: rgb(205, 52, 52);
   margin-bottom: 3px;
 }
-#udsalg_procent {
+.udsalg_procent {
   position: absolute;
   background-color: rgb(205, 52, 52);
   padding: 0 15px 0 15px;
@@ -124,7 +140,7 @@ p {
 .udsolgt {
   opacity: 50%;
 }
-#udsolgt_tekst {
+.udsolgt_tekst {
   position: absolute;
   padding: 0 15px 0 15px;
   z-index: 1;
@@ -132,7 +148,10 @@ p {
   color: whitesmoke;
   right: 0;
 }
-
+.underkategori_maerke {
+  color: black;
+  opacity: 50%;
+}
 .grid_1_1 {
   display: grid;
   grid-template-columns: 1fr 1fr;

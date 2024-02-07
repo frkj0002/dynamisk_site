@@ -24,21 +24,28 @@ function showProduct(product) {
 
   // ændre indhold
   copy.querySelector("h2").textContent = product.productdisplayname;
+  // copy.querySelector("#procent").textContent = discount;
   copy.querySelector(".underkategori").textContent = product.subcategory;
   copy.querySelector(".product_image").src = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
   copy.querySelector(".maerke").textContent = product.brandname;
+  copy.querySelector(".pris").textContent = "DKK " + product.price + " ,-";
   copy.querySelector("a").href = `produkt.html?id=${product.id}`;
   if (product.soldout) {
     // produktet er udsolgt
-    copy.querySelector("article").classList.add("udsolgt_tekst");
-    copy.querySelector("article").classList.add("udsolgt");
-  } else {
-    copy.querySelector("#udsolgt_tekst").classList.add("skjul");
-    copy.querySelector("article").classList.remove("udsolgt");
+    copy.querySelector(".udsolgt_tekst").classList.remove("skjul");
+    copy.querySelector(".product_image").classList.add("udsolgt");
   }
+  // } else {
+  //   copy.querySelector(".udsolgt_tekst").classList.add("skjul");
+  //   copy.querySelector("article").classList.remove("udsolgt");
+  // }
   if (product.discount) {
-    copy.querySelector;
+    copy.querySelector(".udsalg_procent").classList.remove("skjul");
+    copy.querySelector(".udsalg_pris_efter").classList.remove("skjul");
+    copy.querySelector(".udsalg_pris_efter").textContent = "DKK " + Math.round((product.price * (100 - product.discount)) / 100) + " ,-";
   }
+  copy.querySelector("#procent").textContent = product.discount + "%";
+
   // appende (ændre)
   document.querySelector(".grid_1_1_1").appendChild(copy);
 }

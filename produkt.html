@@ -21,23 +21,33 @@
         <nav>
             <ul>
                 <li><a href="kategori.html">Kategorier</a></li>
-                <li><a href="produktliste.html">Produktliste</a></li>
-                <li><a href="produkt.html">Produkt</a></li>
+                <!-- <li><a href="produktliste.html">Produktliste</a></li>
+                <li><a href="produkt.html">Produkt</a></li> -->
             </ul>
         </nav>
     </header>
     <main>
-        <a href="produktliste.html" class="tilbage">
+        <!-- <a href="produktliste.html" class="tilbage">
             <p>Tilbage</p>
-        </a>
+        </a> -->
         <div class="grid_1_1">
+
             <div class="produkt_billede">
+                <div class="udsalg_procent skjul">
+                    <p id="procent">Procent</p>
+                </div>
+                <div class="udsolgt_tekst skjul">
+                    <p>Udsolgt</p>
+                </div>
                 <img src="https://kea-alt-del.dk/t7/images/webp/640/1163.webp" alt="nike" class="product_img">
             </div>
             <div class="koeb_boks">
                 <h3>Sahara Team India Fanwear Round Neck Jersey</h3>
                 <p class="udsolgt"><span class="underkategori">T-shirts</span> | <span class="maerke">Nike</span></p>
                 <h4 class="pris">pris</h4>
+                <p class="pris udsalg_pris_før skjul">DKK 3499,-</p>
+                <!-- <h4 class="udsalg_pris_efter skjul">DKK 2414,-</h4>
+                <p class="pris udsalg_pris_før">DKK 3499,-</p> -->
                 <form>
                     <label>Vælg størrelse:
                         <select name="size">
@@ -51,6 +61,7 @@
                 </form>
             </div>
         </div>
+
     </main>
     <script src="produkt.js"></script>
 </body>

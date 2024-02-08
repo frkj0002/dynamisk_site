@@ -1,16 +1,13 @@
-// function sidenVises() {
-//   document.querySelector("#udsalg_procent").classList.add("skjul");
-//   document.querySelector("#udsolgt_tekst").classList.add("skjul");
-//   document.querySelector(".udsalg_pris_efter").classList.add("skjul");
-// }
+// fetch(`https://kea-alt-del.dk/t7/api/products/?limit=200&category=` + category)
+const urlParams = new URLSearchParams(window.location.search);
+const category = urlParams.get("category");
 
-// sidenVises();
-
-fetch("https://kea-alt-del.dk/t7/api/products")
+fetch(`https://kea-alt-del.dk/t7/api/products/?limit=200&category=` + category)
   .then((res) => res.json())
   .then(showProducts);
 
 function showProducts(products) {
+  console.log("hej");
   // looper og kalder showProduct
   products.forEach(showProduct);
 }
@@ -35,14 +32,12 @@ function showProduct(product) {
     copy.querySelector(".udsolgt_tekst").classList.remove("skjul");
     copy.querySelector(".product_image").classList.add("udsolgt");
   }
-  // } else {
-  //   copy.querySelector(".udsolgt_tekst").classList.add("skjul");
-  //   copy.querySelector("article").classList.remove("udsolgt");
-  // }
+
   if (product.discount) {
     copy.querySelector(".udsalg_procent").classList.remove("skjul");
     copy.querySelector(".udsalg_pris_efter").classList.remove("skjul");
     copy.querySelector(".udsalg_pris_efter").textContent = "DKK " + Math.round((product.price * (100 - product.discount)) / 100) + " ,-";
+    copy.querySelector(".pris").classList.add("pris_før");
   }
   copy.querySelector("#procent").textContent = product.discount + "%";
 
@@ -50,29 +45,6 @@ function showProduct(product) {
   document.querySelector(".grid_1_1_1").appendChild(copy);
 }
 
-/* <article class="produkter">
-                <div class="udsalg_procent">
-                    <p>31%</p>
-                </div>
-                <div class="udsolgt_tekst">
-                    <p>Udsolgt</p>
-                </div>
-                <div>
-                    <a href="produkt.html">
-                        <img src="https://kea-alt-del.dk/t7/images/webp/640/1542.webp" alt="sko" class="udsolgt">
-                        <h2 class="udsolgt">Ballistic Rubber Shoe</h2>
-                    </a>
-                    <p class="udsolgt">Sko | Puma</p>
-                    <div class="flex_pris">
-                        <p class="udsalg_pris_efter udsolgt">DKK 2414,-</p>
-                        <p class="udsalg_pris_før udsolgt">DKK 3499,-</p>
-                        <button class="udsolgt">Køb</button>
-                    </div>
-
-                </div>
-            </article> */
-
-/* //   "id": 1525,
 //   "gender": "Unisex",
 //   "category": "Accessories",
 //   "subcategory": "Bags",

@@ -16,9 +16,6 @@ function showProduct() {
     .then(function (json) {
       visProdukt(json);
     });
-
-  // .then((res) => res.json())
-  // .then(visProdukt);
 }
 
 function visProdukt(produkt) {
@@ -28,7 +25,20 @@ function visProdukt(produkt) {
   document.querySelector(".underkategori").textContent = produkt.subcategory;
   document.querySelector(".maerke").textContent = produkt.brandname;
   document.querySelector(".pris").textContent = "DKK " + produkt.price + " ,-";
-  //document.querySelector(".product_img").alt = produkt.productdisplayname;
+
+  if (produkt.discount) {
+    document.querySelector(".udsalg_procent").classList.remove("skjul");
+    document.querySelector(".udsalg_pris_før").classList.remove("skjul");
+    document.querySelector(".udsalg_pris_før").classList.add("pris_før");
+    document.querySelector("h4").classList.add("udsalg_pris_efter");
+    document.querySelector("h4").textContent = "DKK " + Math.round((produkt.price * (100 - produkt.discount)) / 100) + " ,-";
+  }
+  document.querySelector("#procent").textContent = produkt.discount + "%";
+
+  if (produkt.soldout) {
+    document.querySelector(".udsolgt_tekst").classList.remove("skjul");
+    document.querySelector(".product_img").classList.add("udsolgt");
+  }
 }
 
 showProduct();

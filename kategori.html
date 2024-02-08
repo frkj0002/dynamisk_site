@@ -21,22 +21,37 @@
         <nav>
             <ul>
                 <li><a href="kategori.html">Kategorier</a></li>
-                <li><a href="produktliste.html">Produktliste</a></li>
-                <li><a href="produkt.html">Produkt</a></li>
+                <!-- <li><a href="produktliste.html">Produktliste</a></li>
+                <li><a href="produkt.html">Produkt</a></li> -->
             </ul>
         </nav>
     </header>
+    <h1>Kategorier</h1>
     <main>
-        <h1>Kategorier</h1>
-        <div class="grid_1_1_1">
-            <a href="produktliste.html" class="kategorier">Accessories</a>
-            <a href="produktliste.html" class="kategorier">Apparel</a>
-            <a href="produktliste.html" class="kategorier">Footwear</a>
-            <a href="produktliste.html" class="kategorier">Free items</a>
-            <a href="produktliste.html" class="kategorier">Personal care</a>
-            <a href="produktliste.html" class="kategorier">Sporting goods</a>
+
+        <div>
+            <section class="lettergroup">
+                <template id="kategorier_template">
+
+                    <ol><a href="produktliste.html?category=Accessories" class="kategorier"></a></ol>
+
+                </template>
+                <!-- <ol></ol> -->
+            </section>
         </div>
+
+
+
+
+        <!-- <a href="produktliste.html" class="kategorier">Accessories</a>
+        <a href="produktliste.html" class="kategorier">Apparel</a>
+        <a href="produktliste.html" class="kategorier">Footwear</a>
+        <a href="produktliste.html" class="kategorier">Free items</a>
+        <a href="produktliste.html" class="kategorier">Personal care</a>
+        <a href="produktliste.html" class="kategorier">Sporting goods</a> -->
+
     </main>
+    <script src="kategori.js"></script>
 </body>
 
 </html>
